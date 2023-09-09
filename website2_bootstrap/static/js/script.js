@@ -1,0 +1,523 @@
+// Obtener todos los botones de colapso
+var collapseButtons = document.querySelectorAll('.navbar-toggler');
+
+// Usar el evento "click" para los botones de colapso
+collapseButtons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    var navbar2 = document.querySelector('.navbar2');
+    var scrollPosition = window.scrollY;
+
+    // Mostrar u ocultar navbar2 dependiendo del estado del botón de colapso
+    if (scrollPosition >= 100 && button.getAttribute('aria-expanded') === 'true') {
+      navbar2.classList.add('scroll-show');
+    }
+  });
+});
+
+// Usar el evento "scroll" para controlar la aparición del navbar2
+window.addEventListener('scroll', function () {
+  var navbar2 = document.querySelector('.navbar2');
+  var scrollPosition = window.scrollY;
+
+  // Mostrar u ocultar navbar2
+  if (scrollPosition >= 100) {
+    navbar2.classList.add('scroll-show');
+  } else {
+    navbar2.classList.remove('scroll-show');
+  }
+});
+
+
+
+/**------------------CODIGO PARA LOS SELECTORES---------------------------------**/
+
+let $region = document.querySelector('#region');
+let $ciudad = document.querySelector('#ciudad');
+
+let region = ["Valparaíso", 
+              "OHiggins", 
+              "Maule", 
+              "Ñuble", 
+              "Bío Bío", 
+              "Araucanía",
+              "Los Ríos",
+              "Los Lagos"]
+
+let ciudad = ["Valparaíso", "Quillota",
+              "Rancagua", "Pichilemu",
+              "Talca", "Constitución",
+              "Chillán",
+              "Concepción", "Los Angeles", "Lebu",
+              "Temuco", "Angol", "Villarica",
+              "Valdivia", "Los Lagos",
+              "Puerto Montt", "Osorno", "Castro", "Chaitén"] 
+
+function mostrarLugares(arreglo, lugar, selectorVacio = true) {
+  let elementos = "";
+    if (selectorVacio) {
+      elementos += '<option selected disabled>Seleccione</option>';
+    }
+    for (let i = 0; i < arreglo.length; i++) {
+      elementos +=
+        '<option value="' + arreglo[i] + '">' + arreglo[i] + '</option>';
+      }
+              
+                lugar.innerHTML = elementos;
+              }
+              
+
+mostrarLugares(region, $region)
+
+$region.addEventListener("change", function () {
+  let valor = $region.value;
+  switch (valor) {
+    case "Valparaíso":
+      let valparaiso = ciudad.slice(0, 2);
+      mostrarLugares(valparaiso, $ciudad);
+      break;
+    case "OHiggins":
+      let ohiggins = ciudad.slice(2,4)
+      mostrarLugares(ohiggins, $ciudad)
+    break
+    case "Maule":
+      let maule = ciudad.slice(4,6)
+      mostrarLugares(maule, $ciudad)
+    break
+    case "Ñuble":
+      let ñuble = ciudad.slice(6,7)
+      mostrarLugares(ñuble, $ciudad)
+    break
+    case "Bío Bío":
+      let biobio = ciudad.slice(7,10)
+      mostrarLugares(biobio, $ciudad)
+    break
+    case "Araucanía":
+      let araucania = ciudad.slice(10,13)
+      mostrarLugares(araucania, $ciudad)
+    break
+    case "Los Ríos":
+      let rios = ciudad.slice(13,15)
+      mostrarLugares(rios, $ciudad)
+    break
+    case "Los Lagos":
+      let lagos = ciudad.slice(15,19)
+      mostrarLugares(lagos, $ciudad)
+    break
+  }
+})
+
+
+/**------------------------------ CODIGO PARA EL BOTON ---------------------------**/
+
+function obtenerRutaImagen(region, ciudad) {
+  if (region === 'Valparaíso' && ciudad === 'Valparaíso') {
+    return ['assets/Series/ts_Valparaíso.jpg', 'assets/skew-t/Valparaiso/000.png'];
+  } 
+  else if (region === 'Valparaíso' && ciudad === 'Quillota') {
+    return ['assets/Series/ts_Quillota.jpg', 'assets/skew-t/Quillota/000.png'];
+  }
+  else if (region === 'OHiggins' && ciudad === 'Rancagua') {
+    return ['assets/Series/ts_Rancagua.jpg', 'assets/skew-t/Rancagua/000.png'];
+  }
+  else if (region === 'OHiggins' && ciudad === 'Pichilemu') {
+    return ['assets/Series/ts_Pichilemu.jpg', 'assets/skew-t/Pichilemu/000.png'];
+  }
+  else if (region === 'Maule' && ciudad === 'Talca') {
+    return ['assets/Series/ts_Talca.jpg', 'assets/skew-t/Talca/000.png'];
+  }
+  else if (region === 'Maule' && ciudad === 'Constitución') {
+    return ['assets/Series/ts_Constitución.jpg', 'assets/skew-t/Constitucion/000.png'];
+  }
+  else if (region === 'Ñuble' && ciudad === 'Chillán') {
+    return ['assets/Series/ts_Chillán.jpg', 'assets/skew-t/Chillan/000.png'];
+  }
+  else if (region === 'Bío Bío' && ciudad === 'Concepción') {
+    return ['assets/Series/ts_Concepción.jpg', 'assets/skew-t/Concepcion/000.png'];
+  }  
+  else if (region === 'Bío Bío' && ciudad === 'Los Angeles') {
+    return ['assets/Series/ts_Los Ángeles.jpg', 'assets/skew-t/Los Angeles/000.png'];
+  }  
+  else if (region === 'Bío Bío' && ciudad === 'Lebu') {
+    return ['assets/Series/ts_Lebu.jpg', 'assets/skew-t/Lebu/000.png'];
+  }
+  else if (region === 'Araucanía' && ciudad === 'Temuco') {
+    return ['assets/Series/ts_Temuco.jpg', 'assets/skew-t/Temuco/000.png'];
+  }  
+  else if (region === 'Araucanía' && ciudad === 'Angol') {
+    return ['assets/Series/ts_Angol.jpg', 'assets/skew-t/Angol/000.png'];
+  }
+  else if (region === 'Araucanía' && ciudad === 'Villarrica') {
+    return ['assets/Series/ts_Villarica.jpg', 'assets/skew-t/Villarrica/000.png'];
+  }
+  else if (region === 'Los Ríos' && ciudad === 'Valdivia') {
+    return ['assets/Series/ts_Valdivia.jpg', 'assets/skew-t/Valdivia/000.png'];
+  }
+  else if (region === 'Los Ríos' && ciudad === 'Los Lagos') {
+    return ['assets/Series/ts_Los Lagos.jpg', 'assets/skew-t/Los Lagos/000.png'];
+  }
+  else if (region === 'Los Lagos' && ciudad === 'Puerto Montt') {
+    return ['assets/Series/ts_Puerto Montt.jpg', 'assets/skew-t/Puerto Monnt/000.png'];
+  }
+  else if (region === 'Los Lagos' && ciudad === 'Osorno') {
+    return ['assets/Series/ts_Osorno.jpg', 'assets/skew-t/Osorno/000.png'];
+  }
+  else if (region === 'Los Lagos' && ciudad === 'Castro') {
+    return ['assets/Series/ts_Castro.jpg', 'assets/skew-t/Castro/000.png'];
+  }
+  else if (region === 'Los Lagos' && ciudad === 'Chaitén') {
+    return ['assets/Series/ts_Chaitén.jpg', 'assets/skew-t/Chaiten/000.png'];
+  }
+  return ['', ''];
+}
+let $imagen1 = document.querySelector('#imagen1');
+let $imagen2 = document.querySelector('#imagen2');
+
+function buscarImagen() {
+  let regionSeleccionada = $region.value;
+  let ciudadSeleccionada = $ciudad.value;
+  
+  let rutasImagenes = obtenerRutaImagen(regionSeleccionada, ciudadSeleccionada);
+  console.log("Rutas de las imágenes:", rutasImagenes);
+
+  mostrarImagenes(rutasImagenes);
+  mostrarListaImagenesSkewT(ciudadSeleccionada);
+
+  document.querySelector(".images-container").style.display = "block";
+
+  // Deseleccionar cualquier elemento previamente seleccionado
+  if (indiceSeleccionado !== -1) {
+    document.getElementById("lista_imagen_skewt")
+      .children[indiceSeleccionado].classList.remove("active");
+    indiceSeleccionado = -1;
+  }
+
+  // Actualizar la imagen en el lado derecho con la imagen 000.png
+  actualizarImagenSkewT(0);
+  
+  // Resaltar el primer elemento de la lista como activo
+  const listaImagenesElement = document.getElementById("lista_imagen_skewt");
+  if (listaImagenesElement.children.length > 0) {
+    listaImagenesElement.children[0].classList.add("active");
+    indiceSeleccionado = 0;
+  }
+}
+
+function mostrarImagenes(rutasImagenes) {
+  $imagen1.src = rutasImagenes[0];
+}
+
+
+//-----------Botones-------------
+let $botonBuscar = document.querySelector('#buscar');
+
+$botonBuscar.addEventListener('click', function() {
+  let regionSeleccionada = $region.value;
+  let ciudadSeleccionada = $ciudad.value;
+
+  if (regionSeleccionada !== 'Seleccione' && ciudadSeleccionada !== 'Seleccione') {
+    buscarImagen();
+  } else {
+    alert('Seleccione una región y una ciudad antes de buscar.');
+  }
+});
+$imagen1.addEventListener('click', function() {
+  window.open($imagen1.src);
+});
+
+// Activa los tooltips de Bootstrap
+document.addEventListener("DOMContentLoaded", function () {
+  const tooltips = new bootstrap.Tooltip(document.body, {
+    selector: '[data-bs-toggle="tooltip"]',
+  });
+});
+
+
+// Array de nombres de archivo de imágenes
+var imagenes_Skewt =
+{"Angol": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Castro": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Chaitén": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Chillán": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Concepción": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Constitución": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Lebu": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Los Angeles": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Los Lagos": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Osorno": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Pichilemu": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Puerto Montt": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Rancagua": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Talca": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Temuco": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Valdivia": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Valparaíso": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+
+"Villarrica": ["000.png", "003.png", "006.png",
+"009.png", "012.png", "015.png",
+"018.png", "021.png", "024.png",
+"027.png", "030.png", "033.png",
+"036.png", "039.png", "042.png",
+"045.png", "048.png", "051.png",
+"054.png", "057.png", "060.png",
+"063.png", "066.png", "069.png", "072.png"],
+};
+
+// Array de títulos personalizados
+var titulos = ["000","003", "006", "009",
+"012", "015", "018",
+"021", "024", "027",
+"030", "033", "036",
+"039", "042", "045",
+"048", "051", "054",
+"057", "060", "063",
+"066", "069", "072"];
+
+function mostrarListaImagenesSkewT(ciudad) {
+  const listaImagenes = imagenes_Skewt[ciudad];
+  const listaImagenesElement = document.getElementById("lista_imagen_skewt");
+
+  if (listaImagenes) {
+    listaImagenesElement.innerHTML = "";
+
+    for (let i = 0; i < listaImagenes.length; i++) {
+      const imagenElement = document.createElement("li");
+      imagenElement.className = "list-group-item";
+      const imagenLink = document.createElement("a");
+      const imagenTexto = document.createTextNode(titulos[i]);
+
+      imagenLink.appendChild(imagenTexto);
+      imagenElement.appendChild(imagenLink);
+      listaImagenesElement.appendChild(imagenElement);
+
+      // Agrega un evento click para resaltar y deseleccionar elementos
+      imagenLink.addEventListener("click", function () {
+        actualizarImagenSkewT(i);
+        if (indiceSeleccionado !== -1) {
+          listaImagenesElement.children[indiceSeleccionado].classList.remove("active");
+        }
+        imagenElement.classList.add("active");
+        indiceSeleccionado = i;
+      });
+    }
+  } else {
+    console.error("No se encontraron imágenes para la ciudad seleccionada.");
+  }
+}
+
+// Agregar una función para actualizar la imagen en el contenedor de imágenes
+let indiceImagenActual = 0;
+let indiceSeleccionado = -1;
+
+function resaltarElementoLista(indice) {
+  const listaImagenesElement = document.getElementById("lista_imagen_skewt");
+  
+  // Deseleccionar cualquier elemento previamente seleccionado
+  if (indiceSeleccionado !== -1) {
+    listaImagenesElement.children[indiceSeleccionado].classList.remove("active");
+  }
+  
+  // Resaltar el elemento actual
+  listaImagenesElement.children[indice].classList.add("active");
+  indiceSeleccionado = indice;
+}
+
+function actualizarImagenSkewT(indice) {
+  const ciudadSeleccionada = $ciudad.value;
+  const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
+  const rutaImagen = "assets/skew-t/" + ciudadSeleccionada + "/" + listaImagenes[indice];
+  const $skewtImagen = document.getElementById("skewt_imagen");
+
+  if ($skewtImagen) {
+    $skewtImagen.src = rutaImagen;
+    resaltarElementoLista(indice); // Resaltar el elemento de la lista
+  } else {
+    console.error("Elemento 'skewt_imagen' no encontrado en el DOM.");
+  }
+}
+
+
+//En esta parte del codigo se presentan las funciones que se utilizarán para los botones de avance y retroceso de las imagenes Skew-T.
+document.getElementById("anterior").addEventListener("click", function() {
+  if (indiceImagenActual > 0) {
+    indiceImagenActual--;
+    actualizarImagenSkewT(indiceImagenActual);
+  }
+});
+
+document.getElementById("siguiente").addEventListener("click", function() {
+  const ciudadSeleccionada = $ciudad.value;
+  const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
+  if (indiceImagenActual < listaImagenes.length - 1) {
+    indiceImagenActual++;
+    actualizarImagenSkewT(indiceImagenActual);
+  }
+});
+
+document.getElementById("anterior-dos").addEventListener("click", function() {
+  avanzarImagen(-4);
+});
+
+document.getElementById("siguiente-dos").addEventListener("click", function() {
+  avanzarImagen(4);
+});
+
+function avanzarImagen(incremento) {
+  const ciudadSeleccionada = $ciudad.value;
+  const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
+
+  const nuevaPosicion = indiceImagenActual + incremento;
+
+  if (nuevaPosicion >= 0 && nuevaPosicion < listaImagenes.length) {
+    indiceImagenActual = nuevaPosicion;
+    actualizarImagenSkewT(indiceImagenActual);
+  }
+}
+
+//----------------Variables-------------
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.descripcion');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      const variable = this.getAttribute('data-variable');
+      const cardTitle = this.closest('.card').querySelector('.card-title').textContent; // Cambio aquí
+      localStorage.setItem('selectedVariable', variable);
+      localStorage.setItem('selectedCardTitle', cardTitle);
+    });
+  });
+});

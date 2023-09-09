@@ -1,0 +1,14 @@
+/* Estilos para la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+}
+
+.imagen {
+  max-width: 100%;
+  height: auto;
+}
