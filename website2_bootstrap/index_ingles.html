@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Página de Meteorología</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body class="bg-body-secondary">
+  <nav class="encabezado navbar" id="inicio">
+    <ul>
+      <li><a href="https://uv.cl/" target="_blank"><img src="assets/images/uv_logo_alta_rgba_blanco-2023.png" alt="Descripción de la imagen" class="logo-uv"></a></li>
+      <li><h1>Página de Meteorología</h1></li>
+    </ul>
+    <a href="https://uv.cl/" target="_blank"><img src="assets/images/logo_meteo_xl_fondocolor_200.jpg" alt="Descripción de la imagen" class="logo-meteo me-4"></a>
+  </nav>
+  
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#inicio">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#mapas">Convective Parameters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#buscador">Search by city</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" href="http://meteo.uv.cl/" target="_blank">About</a>
+          </li>
+        </ul>
+        <a href="index.html" target=""><img src="assets/images/icon_españa.png" alt="" class="icon_ing"></a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar2 navbar-expand-md navbar-dark bg-dark shadow-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav2">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#inicio">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#mapas">Convective Parameters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#buscador">Search by City</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 me-5 active" href="http://meteo.uv.cl/" target="_blank">About</a>
+          </li>
+        </ul>
+        <a href="index.html" target=""><img src="assets/images/icon_españa.png" alt="" class="icon_ing"></a>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!---->
+
+    <div class = "seccion_1 mt-4">
+      <p class="m-4">This page shows the forecast of convective parameters, 
+        mainly for the central-southern part of Chile, calculated from outputs 
+        of the Global Forecast System (GFS) model with a horizontal resolution 
+        of 0.25º degrees. These forecasts can be used as a tool to help monitor 
+        the establishment of favorable conditions for the occurrence of severe 
+        storms or tornadoes/waterspouts in Chile. On this page, users can find 
+        maps with the horizontal distribution of some convective parameters, 
+        skew-T diagrams for a group of cities in central-southern Chile, as 
+        well as time series of some convective parameters for these cities. 
+        The products on this page are updated once a day. The page is available 
+        in both Spanish and English, allowing the user to access the information 
+        on this site in any of these languages. It is important to note that the 
+        products on this page should not be taken as an official forecast, 
+        but only as a guide for monitoring favorable conditions for the 
+        occurrence of severe storms.</p>
+        <p id="mapas"></p>
+    </div>
+  <!-- GRAFICOS -->
+  <div>
+    <div class="container">
+      <h2>Maps of Convective Parameters</h2>
+      <div class="row">
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <a target="_blank" href="assets/variables/pwv_ff.gif">
+              <img src="assets/variables/pwv_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+            </a>
+            <div class="card-body m-1">
+              <h5 class="card-title" id="PWV">PWV</h5>
+              <p class="card-text mt-1">Precipitable water (entire column). Units: [mm].</p>
+                <a target="_blank" class="descripcion" href="index_parametros.html?variable=pwv_" data-variable="pwv_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mt-4">
+          <div class="card" id="thetae">
+            <a target="_blank" href="assets/variables/thetae_01km_ff.gif">
+              <img src="assets/variables/thetae_01km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+            </a>
+            <div class="card-body m-1">
+              <h5 class="card-title" id="Theta-e [0-1 km]">Theta-e [0-1 km]</h5>
+              <p class="card-text mt-1">Mean theta-e between the surface and 1 km AGL. Units: [K].</p>
+                <a target="_blank" class="descripcion" href="index_parametros.html?variable=thetae_" data-variable="thetae_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <a target="_blank" href="assets/variables/mflux_02km_ff.gif">
+              <img src="assets/variables/mflux_02km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+            </a>
+            <div class="card-body m-1">
+              <h5 class="card-title" id="Moisture Flux [0-2km]">Moisture Flux [0-2km]</h5>
+              <p class="card-text mt-1">Mean wind speed multiplied by mean mixing ratio in the layer between the surface and 2 km AGL (both). Units: [g/s/m2].</p>
+                <a target="_blank" class="descripcion" href="index_parametros.html?variable=mflux_02km_" data-variable="mflux_02km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-4 mt-4">
+        <div class="card">
+          <a target="_blank" href="assets/variables/sbcape_ff.gif">
+            <img src="assets/variables/sbcape_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+          </a>
+          <div class="card-body m-1">
+            <h5 class="card-title" id="SB-CAPE">SB-CAPE</h5>
+            <p class="card-text mt-1"> Convective available potential energy, derived from the surface-based parcel. Units: [J/kg].</p>
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=sbcape_" data-variable="sbcape_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <div class="card" id="bs1">
+          <a target="_blank" href="assets/variables/bs01km_ff.gif">
+            <img src="assets/variables/bs01km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+          </a>
+          <div class="card-body m-1">
+            <h5 class="card-title" id="Vertical Wind Shear [0-1km]">Vertical Wind Shear [0-1km]</h5>
+            <p class="card-text mt-1">Bulk wind shear between the surface and 1 km AGL. Units: [m/s].</p>
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=bs01km_" data-variable="bs01km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <div class="card" id="bs6">
+          <a target="_blank" href="assets/variables/bs06km_ff.gif">
+            <img src="assets/variables/bs06km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+          </a>
+          <div class="card-body m-1">
+            <h5 class="card-title" id="Vertical Wind Shear [0-6km]">Vertical Wind Shear [0-6km]</h5>
+            <p class="card-text mt-1"> Bulk wind shear between the surface and 6 km AGL. Units: [m/s].</p>
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=bs06km_" data-variable="bs06km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-4 mt-4">
+          <div class="card" id="srh5">
+            <a target="_blank" href="assets/variables/srh_0500m_ff.gif">
+              <img src="assets/variables/srh_0500m_ff.gif" assets/variables/bs06km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+            </a>
+            <div class="card-body m-1">
+              <h5 class="card-title" id="SRH [0-500 m]">SRH [0-500 m]</h5>
+              <p class="card-text mt-1">  Storm-relative helicity [0-500 m]: Storm-relative helicity between the surface and 500m AGL for left-moving supercell vector. Units: [m2/s2].</p>
+                <a target="_blank" class="descripcion" href="index_parametros.html?variable=srh_0500m_" data-variable="srh_0500m_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4 mt-4">
+          <div class="card" id= srh3>
+            <a target="_blank" href="assets/variables/srh_03km_ff.gif">
+              <img src="assets/variables/srh_03km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+            </a>
+            <div class="card-body m-1">
+              <h5 class="card-title" id="SRH [0-3 km]">Storm-relative helicity [0-3km]</h5>
+              <p class="card-text mt-1">Storm-relative helicity between the surface and 3km AGL for left-moving supercell vector. Units: [m2/s2] </p>
+                <a target="_blank" class="descripcion" href="index_parametros.html?variable=srh_01km_" data-variable="srh_01km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4 mt-4">
+          <div class="card" id="stp">
+            <a target="_blank" href="assets/variables/stp_ff.gif">
+              <img src="assets/variables/stp_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
+            </a>
+            <div class="card-body m-1">
+              <h5 class="card-title" id="STP">STP</h5>
+              <p class="card-text mt-1"> Significant Tornado Parameter based on the formula from Coffer et al. (2019), doi: https://doi.org/10.1175/WAF-D-19-0115.1. This version uses left-moving supercell vector for SRH calculation and is dedicated to the Southern Hemisphere. The parameter is dimensionless.
+              </p>
+                <a target="_blank" class="descripcion" href="index_parametros.html?variable=stp_new_" data-variable="stp_new_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Hourly Forecast</small></p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<p id="buscador"></p>
+</div>
+
+<h2 class="m-5"> Convective Parameters and Skew-T by City</h2>
+
+<div class="seccion3 column">
+  <div class="d-flex">
+    <div class="select-container">
+      <ul class="list-group list-group-horizontal lista-productos">
+        <li class="list-group-item">
+          <h4>Select the region</h4>
+        </li>
+        <li class="list-group-item">
+          <select name="" id="region" class="form-select form-select-lg" aria-label="Default select example"></select>
+        </li>
+        <li class="list-group-item">
+          <h4>Select the city</h4>
+        </li>
+        <li class="list-group-item">
+          <select name="" id="ciudad" class="form-select form-select-lg" aria-label="Default select example"></select>
+        </li>
+        <li class="list-group-item">
+          <button type="button" class="btn btn-primary btn-block" id="buscar">Search</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="images-container" style="display: none;">
+    <ul class="list-group list-group-horizontal">
+      <h2 id="skewt-titulo">Hora de Pronóstico<span id="ciudad-seleccionada"></span></h2>
+      <li class="list-group-item"><h2 id="skewt_hora-titulo"></h2></li>
+    </ul>
+    <div class="skew-t_container ms-4">
+      <div class="row">
+        <div class="col-2">
+          <div class="skewt_lista">
+            <div class="lista-scroll">
+              <ul id="lista_imagen_skewt" class="list-group lista_imagen_skewt  active">
+                <!-- Los elementos de la lista se agregarán aquí dinámicamente -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-10">
+          <div class="skewt_imagen_container">
+            <img id="skewt_imagen" class="align-items-center skewt_imagen d-flex justify-content-center ms-5" src="" alt="skewt_imagen">
+            <!--Aqui debe aparecer mi imagen-->
+            <div class="skewt_boton text-center">
+              <button id="anterior-dos" class="btn btn-primary"><<</button>
+              <button id="anterior" class="btn btn-primary"><</button>
+              <button id="siguiente" class="btn btn-primary">></button>
+              <button id="siguiente-dos" class="btn btn-primary">>></button>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+
+    <h2 id="mapa_titulo">Temporal Series</h2>
+    <a target="_blank" ref=""><img  src="" alt="" id="imagen1" class="imagen_mapa mx-auto p-2"></a>
+  </div>
+</div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Department of Meteorology - Faculty of Sciences - University of Valparaíso</p>
+      <p>This page and its products were generated by Cristina B. Verdugo, Felipe Gutiérrez, and Julio C. Marín from the University of Valparaíso, Chile.</p>
+      
+    </div>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/variables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
