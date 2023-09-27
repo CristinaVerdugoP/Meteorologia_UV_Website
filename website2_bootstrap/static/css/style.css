@@ -178,7 +178,6 @@ margin-top: 5px;
   width: 100%;
 }
 
-
 .list-group-item button {
   margin-left: auto;
 }
@@ -191,6 +190,35 @@ margin-top: 5px;
   .list-group-item {
     width: 100%;
   }
+}
+/*---------------Estilos para la seccion Skew-t----------*/
+.skew-t_container {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.skewt_lista{
+  margin-top: 15px;
+}
+#skewt-titulo{
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+#lista_imagen_skewt {
+  height: 500px;
+  overflow-y: scroll; 
+}
+
+.lista_imagen_skewt .list-group-item.active {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.skewt_imagen{
+  display: block;
+  text-align: center;
+  align-items: center;
+  width: 85%;
 }
 
 /*------------ Estilos para el mapa de Series Temporales ---------*/
@@ -209,36 +237,9 @@ margin-top: 5px;
 
 #mapa_titulo{
   font-size: 25px;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
-
-/*---------------Estilos para la seccion Skew-t----------*/
-.skew-t_container {
-  overflow: hidden;
-
-}
-#skewt-titulo{
-  font-size: 20px;
-  margin-left: 15px;
-}
-
-#lista_imagen_skewt {
-  height: 550px;
-  overflow-y: scroll; 
-}
-
-.lista_imagen_skewt .list-group-item.active {
-  background-color: #e0e0e0;
-  color: #000;
-}
-
-.skewt_imagen{
-  display: block;
-  text-align: center;
-  align-items: center;
-  width: 85%;
-}
 
 /* Estilos para el footer */
 .footer {

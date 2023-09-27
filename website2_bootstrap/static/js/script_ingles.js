@@ -55,7 +55,7 @@ let ciudad = ["Valparaíso", "Quillota",
 function mostrarLugares(arreglo, lugar, selectorVacio = true) {
   let elementos = "";
     if (selectorVacio) {
-      elementos += '<option selected disabled>Seleccione</option>';
+      elementos += '<option selected disabled>Select</option>';
     }
     for (let i = 0; i < arreglo.length; i++) {
       elementos +=
@@ -214,10 +214,10 @@ $botonBuscar.addEventListener('click', function() {
   let regionSeleccionada = $region.value;
   let ciudadSeleccionada = $ciudad.value;
 
-  if (regionSeleccionada !== 'Seleccione' && ciudadSeleccionada !== 'Seleccione') {
+  if (regionSeleccionada !== 'Select' && ciudadSeleccionada !== 'Select') {
     buscarImagen();
   } else {
-    alert('Seleccione una región y una ciudad antes de buscar.');
+    alert('Select a region and city before searching');
   }
 });
 $imagen1.addEventListener('click', function() {
