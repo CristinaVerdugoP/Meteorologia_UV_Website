@@ -47,9 +47,13 @@ body{
   background-color: #333;
   width: 100%;
 }
+.lista_ul{
+  margin-left: 3%;
+}
 
 .navbar2 {
   position: fixed;
+  height: 50px;
   top: 0;
   left: 0;
   width: 100%;
@@ -58,16 +62,27 @@ body{
   transition: opacity 0.3s ease-in-out;
 }
 
+.navbar2 ul{
+margin-top: 5px;
+}
 .scroll-show {
   opacity: 1;
   z-index: 1000;
 }
 
 .icon_ing{
-  max-height: 30px;
-  margin-right: 35%;
+  max-height: 40px;
+  margin-right: 25%;
+  justify-content: end;
+  display: flex;
+  align-items: end;
 }
 
+.a_icon{
+  justify-content: end;
+  display: flex;
+  align-items: end;
+}
 
 /*Estilos para seccion1*/
 .seccion_1{  
@@ -89,7 +104,7 @@ body{
 }
 
 
-/* Estilos para los gráficos */
+/* Estilos para las tarjetas */
 .container {
   width: 100%;
   max-width: 90% !important;
@@ -99,7 +114,6 @@ body{
   padding-top: 0px !important;
   display: flex;
   flex-direction: column;
-  height: 220px;
 }
 
 .card-title {
@@ -116,9 +130,9 @@ body{
   width: 100%;
 }
 
-.descripcion{
-  display: flex;
-  justify-items: end;
+.mapa{
+  margin-bottom: 20px;
+  margin-left: 20px;
 
 }
 
@@ -168,12 +182,6 @@ body{
 .list-group-item button {
   margin-left: auto;
 }
-.icon { 
-  width: 20%;
-  margin-left: 70%;
-}
-
-
 /* Cambiar el diseño cuando la página se colapse */
 @media (max-width: 768px) {
   .lista-productos {

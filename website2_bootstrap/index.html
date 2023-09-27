@@ -15,28 +15,29 @@
     <a href="https://uv.cl/" target="_blank"><img src="assets/images/logo_meteo_xl_fondocolor_200.jpg" alt="Descripción de la imagen" class="logo-meteo me-4"></a>
   </nav>
   
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-lg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
+      <div
+        class="collapse navbar-collapse justify-content-center lista_ul" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#inicio">Inicio</a>
+            <a class="nav-link fs-6 me-4 active" aria-current="page" href="#inicio">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#mapas">Parámetros Convectivos</a>
+            <a class="nav-link fs-6 me-4 active" aria-current="page" href="#mapas">Parámetros Convectivos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-6 me-5 active" aria-current="page" href="#buscador">Buscador por Ciudad</a>
+            <a class="nav-link fs-6 me-4 active" aria-current="page" href="#buscador">Buscador por Ciudad</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-6 me-5 active" href="http://meteo.uv.cl/" target="_blank">Acerca de</a>
+            <a class="nav-link fs-6 me-4 active" href="http://meteo.uv.cl/" target="_blank">Acerca de</a>
           </li>
         </ul>
-        <a href="index_ingles.html" target=""><img src="assets/images/icon_ing.png" alt="" class="icon_ing"></a>
       </div>
+      <a href="index_ingles.html" class="a_icon data-bs-target"><img src="assets/images/icon_ing.png" class="icon_ing"></a>
     </div>
   </nav>
 
@@ -45,7 +46,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav2">
+      <div class="collapse navbar-collapse lista_ul" style="margin-left:5%" id="navbarNav2">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a class="nav-link fs-6 me-5 active" aria-current="page" href="#inicio">Inicio</a>
@@ -60,7 +61,7 @@
             <a class="nav-link fs-6 me-5 active" href="http://meteo.uv.cl/" target="_blank">Acerca de</a>
           </li>
         </ul>
-        <a href="index_ingles.html" target=""><img src="assets/images/icon_ing.png" alt="" class="icon_ing me-3"></a>
+        <a href="index_ingles.html" class="a_icon data-bs-target"><img src="assets/images/icon_ing.png" class="icon_ing"></a>
       </div>
     </div>
   </nav>
@@ -79,33 +80,36 @@
       <h2>Mapas de Parámetros Convectivos</h2>
       <div class="row">
         <div class="col-md-4 mt-4">
-          <div class="card">
+          <div class="card h-100">
             <a target="_blank" href="assets/variables/pwv_ff.gif">
               <img src="assets/variables/pwv_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
             </a>
             <div class="card-body m-1">
               <h5 class="card-title" id="PWV">PWV</h5>
               <p class="card-text mt-1">Vapor de agua precipitable. Unidades: [mm].</p>
-                <a target="_blank" class="descripcion" href="index_parametros.html?variable=pwv_" data-variable="pwv_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+            </div>
+            <div class="mapa"> 
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=pwv_" data-variable="pwv_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
             </div>
           </div>
         </div>
   
         <div class="col-md-4 mt-4">
-          <div class="card" id="thetae">
+          <div class="card h-100">
             <a target="_blank" href="assets/variables/thetae_01km_ff.gif">
               <img src="assets/variables/thetae_01km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
             </a>
             <div class="card-body m-1">
               <h5 class="card-title" id="Theta-e [0-1 km]">Theta-e [0-1 km]</h5>
-              <p class="card-text mt-1">Temperatura potencial equivalente promedio en la capa 0-1 km. Unidades: [K].</p>
-                <a target="_blank" class="descripcion" href="index_parametros.html?variable=thetae_" data-variable="thetae_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+              <p class="card-text mt-1">Temperatura potencial equivalente promedio en la capa 0-1 km. Unidades: [K].</p>            </div>
+            <div class="mapa">
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=thetae_" data-variable="thetae_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
             </div>
           </div>
         </div>
   
         <div class="col-md-4 mt-4">
-          <div class="card">
+          <div class="card h-100">
             <a target="_blank" href="assets/variables/mflux_02km_ff.gif">
               <img src="assets/variables/mflux_02km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
             </a>
@@ -113,7 +117,9 @@
               <h5 class="card-title" id="Flujo de Humedad [0-2 km]">Flujo de Humedad [0-2 km]</h5>
               <p class="card-text mt-1"> Flujo de humedad en la capa 0-2 km. Es la el producto de la intensidad del viento
                 promedio por razón de mezcla promedio en la capa 0-2 km. Unidades: [g/s/m2].</p>
-                <a target="_blank" class="descripcion" href="index_parametros.html?variable=mflux_02km_" data-variable="mflux_02km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+            </div>
+            <div class="mapa">
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=mflux_02km_" data-variable="mflux_02km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
             </div>
           </div>
         </div>
@@ -124,7 +130,7 @@
   <div class="container">
     <div class="row ">
       <div class="col-md-4 mt-4">
-        <div class="card">
+        <div class="card h-100">
           <a target="_blank" href="assets/variables/sbcape_ff.gif">
             <img src="assets/variables/sbcape_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
           </a>
@@ -132,33 +138,39 @@
             <h5 class="card-title" id="SB-CAPE">SB-CAPE</h5>
             <p class="card-text mt-1"> Energía potencial convectiva disponible, obtenida desde 
               la parcela cercana a superficie. Unidades: [J/kg].</p>
-              <a target="_blank" class="descripcion" href="index_parametros.html?variable=sbcape_" data-variable="sbcape_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+          </div>
+          <div class="mapa">
+            <a target="_blank" class="descripcion" href="index_parametros.html?variable=sbcape_" data-variable="sbcape_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 mt-4">
-        <div class="card" id="bs1">
+        <div class="card h-100" id="bs1">
           <a target="_blank" href="assets/variables/bs01km_ff.gif">
             <img src="assets/variables/bs01km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
           </a>
           <div class="card-body m-1">
             <h5 class="card-title" id="Cizalladura vertical del viento [0-1 km]">Cizalladura vertical del viento [0-1 km]</h5>
             <p class="card-text mt-1">Cizalle vertical del viento entre la superficie y 1 km de altura. Unidades: [m/s].</p>
-              <a target="_blank" class="descripcion" href="index_parametros.html?variable=bs01km_" data-variable="bs01km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+          </div>
+          <div class="mapa">
+            <a target="_blank" class="descripcion" href="index_parametros.html?variable=bs01km_" data-variable="bs01km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 mt-4">
-        <div class="card" id="bs6">
+        <div class="card h-100" id="bs6">
           <a target="_blank" href="assets/variables/bs06km_ff.gif">
             <img src="assets/variables/bs06km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
           </a>
           <div class="card-body m-1">
             <h5 class="card-title" id="Cizalladura vertical del viento [0-6 km]">Cizalladura vertical del viento [0-6 km]</h5>
             <p class="card-text mt-1"> Cizalle vertical del viento entre la superficie y 6 km de altura. Unidades: [m/s].</p>
-              <a target="_blank" class="descripcion" href="index_parametros.html?variable=bs06km_" data-variable="bs06km_""><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+          </div>
+          <div class="mapa">
+            <a target="_blank" class="descripcion" href="index_parametros.html?variable=bs06km_" data-variable="bs06km_""><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
           </div>
         </div>
       </div>
@@ -169,7 +181,7 @@
     <div class="container">
       <div class="row ">
         <div class="col-md-4 mt-4">
-          <div class="card" id="srh5">
+          <div class="card h-100">
             <a target="_blank" href="assets/variables/srh_0500m_ff.gif">
               <img src="assets/variables/srh_0500m_ff.gif" assets/variables/bs06km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
             </a>
@@ -177,13 +189,15 @@
               <h5 class="card-title" id="SRH [0-500 m]">SRH [0-500 m]</h5>
               <p class="card-text mt-1">  Helicidad relativa a la tormenta entre la superficie y 
                 500 metros para el vector de supercelda que se mueve a la izquierda. Unidaes [m2/s2].</p>
-                <a target="_blank" class="descripcion" href="index_parametros.html?variable=srh_0500m_" data-variable="srh_0500m_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+            </div>
+            <div class="mapa">
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=srh_0500m_" data-variable="srh_0500m_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
             </div>
           </div>
         </div>
     
         <div class="col-md-4 mt-4">
-          <div class="card" id= srh3>
+          <div class="card h-100">
             <a target="_blank" href="assets/variables/srh_03km_ff.gif">
               <img src="assets/variables/srh_03km_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
             </a>
@@ -191,13 +205,15 @@
               <h5 class="card-title" id="SRH [0-3 km]">SRH [0-3 km]</h5>
               <p class="card-text mt-1">Helicidad relativa a la tormenta entre la superficie y 3 km para el 
                 vector de supercelda que se mueve a la izquierda. Unidades: [m2/s2].</p>
-                <a target="_blank" class="descripcion" href="index_parametros.html?variable=srh_01km_" data-variable="srh_01km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+            </div>
+            <div class="mapa">
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=srh_01km_" data-variable="srh_01km_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
             </div>
           </div>
         </div>
     
         <div class="col-md-4 mt-4">
-          <div class="card" id="stp">
+          <div class="card h-100">
             <a target="_blank" href="assets/variables/stp_ff.gif">
               <img src="assets/variables/stp_ff.gif" class="card-img-top pt-3 ps-3 pe-3 pb-2" alt="...">
             </a>
@@ -206,7 +222,9 @@
               <p class="card-text mt-1"> Significant tornado parameter: 
                 Parámetro usado para estimar cuando hay condiciones favorables para el desarrollo de las tormentas más severas.
               </p>
-                <a target="_blank" class="descripcion" href="index_parametros.html?variable=stp_new_" data-variable="stp_new_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
+            </div>
+            <div class="mapa">
+              <a target="_blank" class="descripcion" href="index_parametros.html?variable=stp_new_" data-variable="stp_new_"><p class="card-text" style="font-size:20px;"><small class="text-body-secondary">Mapa por hora</small></p></a>
             </div>
           </div>
         </div>
