@@ -48,7 +48,7 @@ let ciudad = ["Valparaíso", "Quillota",
               "Talca", "Constitución",
               "Chillán",
               "Concepción", "Los Angeles", "Lebu",
-              "Temuco", "Angol", "Villarica",
+              "Temuco", "Angol", "Villarrica",
               "Valdivia", "Los Lagos",
               "Puerto Montt", "Osorno", "Castro", "Chaitén"] 
 
@@ -106,7 +106,7 @@ $region.addEventListener("change", function () {
   }
 })
 
-/**------------------------------ CODIGO PARA EL BOTON DE BUSCAR---------------------------**/
+/**------------------------------ CODIGO PARA EL BOTON ---------------------------**/
 
 function obtenerRutaImagen(region, ciudad) {
   if (region === 'Valparaíso' && ciudad === 'Valparaíso') {
@@ -144,7 +144,7 @@ function obtenerRutaImagen(region, ciudad) {
     return ['assets/series/ts_angol.jpg', 'assets/skew-t/angol/000.png'];
   }
   else if (region === 'Araucanía' && ciudad === 'Villarrica') {
-    return ['assets/series/ts_villarica.jpg', 'assets/skew-t/villarrica/000.png'];
+    return ['assets/series/ts_villarrica.jpg', 'assets/skew-t/villarrica/000.png'];
   }
   else if (region === 'Los Ríos' && ciudad === 'Valdivia') {
     return ['assets/series/ts_valdivia.jpg', 'assets/skew-t/valdivia/000.png'];
@@ -330,7 +330,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"puerto_mntt": ["000.png", "003.png", "006.png",
+"puerto_montt": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -405,7 +405,14 @@ var titulos = ["000","003", "006", "009",
 "066", "069", "072"];
 
 function mostrarListaImagenesSkewT(ciudadMayusc) {
-  const ciudad = ciudadMayusc.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  indiceImagenActual = 0;
+  indiceSeleccionado = -1;
+
+  const ciudad = ciudadMayusc
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ /g, "_");
 
   const listaImagenes = imagenes_Skewt[ciudad];
   const listaImagenesElement = document.getElementById("lista_imagen_skewt");
@@ -456,8 +463,12 @@ function resaltarElementoLista(indice) {
 }
 
 function actualizarImagenSkewT(indice) {
-  const ciudadSeleccionada1 = $ciudad.value;
-  const ciudadSeleccionada = ciudadSeleccionada1.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const ciudadMayusc = $ciudad.value;
+  const ciudadSeleccionada = ciudadMayusc
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ /g, "_");
 
   const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
   const rutaImagen = "assets/skew-t/" + ciudadSeleccionada + "/" + listaImagenes[indice];
@@ -482,9 +493,13 @@ document.getElementById("anterior").addEventListener("click", function() {
 
 document.getElementById("siguiente").addEventListener("click", function() {
   const ciudadMayuscula = $ciudad.value;
-  const ciudadSeleccionada = ciudadMayuscula.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const ciudadSeleccionada = ciudadMayuscula
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ /g, "_");
 
-  console.log("Estoy en el boton de siguiente e imprimo:", $ciudad.value)
+  console.log("Estoy en el botón de siguiente e imprimo:", $ciudad.value)
 
   const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
   if (indiceImagenActual < listaImagenes.length - 1) {
@@ -503,8 +518,12 @@ document.getElementById("siguiente-dos").addEventListener("click", function() {
 
 function avanzarImagen(incremento) {
   const ciudadMayusc = $ciudad.value;
-  const ciudadSeleccionada = ciudadMayusc.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
+  const ciudadSeleccionada = ciudadMayusc
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ /g, "_");
+    
   const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
 
   const nuevaPosicion = indiceImagenActual + incremento;
