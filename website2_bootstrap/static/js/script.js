@@ -61,10 +61,10 @@ function mostrarLugares(arreglo, lugar, selectorVacio = true) {
       elementos +=
         '<option value="' + arreglo[i] + '">' + arreglo[i] + '</option>';
       }
-
+              
                 lugar.innerHTML = elementos;
               }
-
+              
 
 mostrarLugares(region, $region)
 
@@ -106,66 +106,63 @@ $region.addEventListener("change", function () {
   }
 })
 
-
 /**------------------------------ CODIGO PARA EL BOTON ---------------------------**/
 
 function obtenerRutaImagen(region, ciudad) {
   if (region === 'Valparaíso' && ciudad === 'Valparaíso') {
-    return ['assets/series/ts_valparaiso.jpg', 'assets/skew-t/Valparaiso/000.png'];
+    return ['assets/series/ts_valparaiso.jpg', 'assets/skew-t/valparaiso/000.png'];
   } 
-  else if (region === 'Valparaíso' && ciudad === 'Quillota') {
-    return ['assets/series/ts_quillota.jpg', 'assets/skew-t/Quillota/000.png'];
-  }
+
   else if (region === 'OHiggins' && ciudad === 'Rancagua') {
-    return ['assets/series/ts_rancagua.jpg', 'assets/skew-t/Rancagua/000.png'];
+    return ['assets/series/ts_rancagua.jpg', 'assets/skew-t/rancagua/000.png'];
   }
   else if (region === 'OHiggins' && ciudad === 'Pichilemu') {
-    return ['assets/series/ts_pichilemu.jpg', 'assets/skew-t/Pichilemu/000.png'];
+    return ['assets/series/ts_pichilemu.jpg', 'assets/skew-t/pichilemu/000.png'];
   }
   else if (region === 'Maule' && ciudad === 'Talca') {
-    return ['assets/series/ts_talca.jpg', 'assets/skew-t/Talca/000.png'];
+    return ['assets/series/ts_talca.jpg', 'assets/skew-t/talca/000.png'];
   }
   else if (region === 'Maule' && ciudad === 'Constitución') {
-    return ['assets/series/ts_constitucion.jpg', 'assets/skew-t/Constitucion/000.png'];
+    return ['assets/series/ts_constitucion.jpg', 'assets/skew-t/constitucion/000.png'];
   }
   else if (region === 'Ñuble' && ciudad === 'Chillán') {
-    return ['assets/series/ts_chillan.jpg', 'assets/skew-t/Chillan/000.png'];
+    return ['assets/series/ts_chillan.jpg', 'assets/skew-t/chillan/000.png'];
   }
   else if (region === 'Bío Bío' && ciudad === 'Concepción') {
-    return ['assets/series/ts_concepción.jpg', 'assets/skew-t/Concepcion/000.png'];
+    return ['assets/series/ts_concepcion.jpg', 'assets/skew-t/concepcion/000.png'];
   }  
   else if (region === 'Bío Bío' && ciudad === 'Los Angeles') {
-    return ['assets/series/ts_los_angeles.jpg', 'assets/skew-t/Los Angeles/000.png'];
+    return ['assets/series/ts_los_angeles.jpg', 'assets/skew-t/los_angeles/000.png'];
   }  
   else if (region === 'Bío Bío' && ciudad === 'Lebu') {
-    return ['assets/series/ts_lebu.jpg', 'assets/skew-t/Lebu/000.png'];
+    return ['assets/series/ts_lebu.jpg', 'assets/skew-t/lebu/000.png'];
   }
   else if (region === 'Araucanía' && ciudad === 'Temuco') {
-    return ['assets/series/ts_temuco.jpg', 'assets/skew-t/Temuco/000.png'];
+    return ['assets/series/ts_temuco.jpg', 'assets/skew-t/temuco/000.png'];
   }  
   else if (region === 'Araucanía' && ciudad === 'Angol') {
-    return ['assets/series/ts_angol.jpg', 'assets/skew-t/Angol/000.png'];
+    return ['assets/series/ts_angol.jpg', 'assets/skew-t/angol/000.png'];
   }
   else if (region === 'Araucanía' && ciudad === 'Villarrica') {
-    return ['assets/series/ts_villarica.jpg', 'assets/skew-t/Villarrica/000.png'];
+    return ['assets/series/ts_villarica.jpg', 'assets/skew-t/villarrica/000.png'];
   }
   else if (region === 'Los Ríos' && ciudad === 'Valdivia') {
-    return ['assets/series/ts_valdivia.jpg', 'assets/skew-t/Valdivia/000.png'];
+    return ['assets/series/ts_valdivia.jpg', 'assets/skew-t/valdivia/000.png'];
   }
   else if (region === 'Los Ríos' && ciudad === 'Los Lagos') {
-    return ['assets/series/ts_los_lagos.jpg', 'assets/skew-t/Los Lagos/000.png'];
+    return ['assets/series/ts_los_lagos.jpg', 'assets/skew-t/los_lagos/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Puerto Montt') {
-    return ['assets/series/ts_puerto_montt.jpg', 'assets/skew-t/Puerto Monnt/000.png'];
+    return ['assets/series/ts_puerto_montt.jpg', 'assets/skew-t/puerto_monnt/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Osorno') {
-    return ['assets/series/ts_osorno.jpg', 'assets/skew-t/Osorno/000.png'];
+    return ['assets/series/ts_osorno.jpg', 'assets/skew-t/osorno/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Castro') {
-    return ['assets/series/ts_castro.jpg', 'assets/skew-t/Castro/000.png'];
+    return ['assets/series/ts_castro.jpg', 'assets/skew-t/castro/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Chaitén') {
-    return ['assets/series/ts_chaiten.jpg', 'assets/skew-t/Chaiten/000.png'];
+    return ['assets/series/ts_chaiten.jpg', 'assets/skew-t/chaiten/000.png'];
   }
   return ['', ''];
 }
@@ -175,7 +172,7 @@ let $imagen2 = document.querySelector('#imagen2');
 function buscarImagen() {
   let regionSeleccionada = $region.value;
   let ciudadSeleccionada = $ciudad.value;
-
+  
   let rutasImagenes = obtenerRutaImagen(regionSeleccionada, ciudadSeleccionada);
   console.log("Rutas de las imágenes:", rutasImagenes);
 
@@ -193,7 +190,7 @@ function buscarImagen() {
 
   // Actualizar la imagen en el lado derecho con la imagen 000.png
   actualizarImagenSkewT(0);
-
+  
   // Resaltar el primer elemento de la lista como activo
   const listaImagenesElement = document.getElementById("lista_imagen_skewt");
   if (listaImagenesElement.children.length > 0) {
@@ -234,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Array de nombres de archivo de imágenes
 var imagenes_Skewt =
-{"Angol": ["000.png", "003.png", "006.png",
+{"angol": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -243,7 +240,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Castro": ["000.png", "003.png", "006.png",
+"castro": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -252,7 +249,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Chaitén": ["000.png", "003.png", "006.png",
+"chaiten": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -261,7 +258,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Chillán": ["000.png", "003.png", "006.png",
+"chillan": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -270,7 +267,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Concepción": ["000.png", "003.png", "006.png",
+"concepcion": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -279,7 +276,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Constitución": ["000.png", "003.png", "006.png",
+"constitucion": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -288,7 +285,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Lebu": ["000.png", "003.png", "006.png",
+"lebu": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -297,7 +294,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Los Angeles": ["000.png", "003.png", "006.png",
+"los_angeles": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -306,7 +303,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Los Lagos": ["000.png", "003.png", "006.png",
+"los_lagos": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -315,7 +312,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Osorno": ["000.png", "003.png", "006.png",
+"osorno": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -324,7 +321,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Pichilemu": ["000.png", "003.png", "006.png",
+"pichilemu": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -333,7 +330,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Puerto Montt": ["000.png", "003.png", "006.png",
+"puerto_mntt": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -342,7 +339,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Rancagua": ["000.png", "003.png", "006.png",
+"rancagua": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -351,7 +348,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Talca": ["000.png", "003.png", "006.png",
+"talca": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -360,7 +357,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Temuco": ["000.png", "003.png", "006.png",
+"temuco": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -369,7 +366,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Valdivia": ["000.png", "003.png", "006.png",
+"valdivia": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -378,7 +375,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Valparaíso": ["000.png", "003.png", "006.png",
+"valparaiso": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -387,7 +384,7 @@ var imagenes_Skewt =
 "054.png", "057.png", "060.png",
 "063.png", "066.png", "069.png", "072.png"],
 
-"Villarrica": ["000.png", "003.png", "006.png",
+"villarrica": ["000.png", "003.png", "006.png",
 "009.png", "012.png", "015.png",
 "018.png", "021.png", "024.png",
 "027.png", "030.png", "033.png",
@@ -407,7 +404,9 @@ var titulos = ["000","003", "006", "009",
 "057", "060", "063",
 "066", "069", "072"];
 
-function mostrarListaImagenesSkewT(ciudad) {
+function mostrarListaImagenesSkewT(ciudadMayusc) {
+  const ciudad = ciudadMayusc.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
   const listaImagenes = imagenes_Skewt[ciudad];
   const listaImagenesElement = document.getElementById("lista_imagen_skewt");
 
@@ -445,19 +444,21 @@ let indiceSeleccionado = -1;
 
 function resaltarElementoLista(indice) {
   const listaImagenesElement = document.getElementById("lista_imagen_skewt");
-
+  
   // Deseleccionar cualquier elemento previamente seleccionado
   if (indiceSeleccionado !== -1) {
     listaImagenesElement.children[indiceSeleccionado].classList.remove("active");
   }
-
+  
   // Resaltar el elemento actual
   listaImagenesElement.children[indice].classList.add("active");
   indiceSeleccionado = indice;
 }
 
 function actualizarImagenSkewT(indice) {
-  const ciudadSeleccionada = $ciudad.value;
+  const ciudadSeleccionada1 = $ciudad.value;
+  const ciudadSeleccionada = ciudadSeleccionada1.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
   const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
   const rutaImagen = "assets/skew-t/" + ciudadSeleccionada + "/" + listaImagenes[indice];
   const $skewtImagen = document.getElementById("skewt_imagen");
@@ -480,7 +481,11 @@ document.getElementById("anterior").addEventListener("click", function() {
 });
 
 document.getElementById("siguiente").addEventListener("click", function() {
-  const ciudadSeleccionada = $ciudad.value;
+  const ciudadMayuscula = $ciudad.value;
+  const ciudadSeleccionada = ciudadMayuscula.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+  console.log("Estoy en el boton de siguiente e imprimo:", $ciudad.value)
+
   const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
   if (indiceImagenActual < listaImagenes.length - 1) {
     indiceImagenActual++;
@@ -497,7 +502,9 @@ document.getElementById("siguiente-dos").addEventListener("click", function() {
 });
 
 function avanzarImagen(incremento) {
-  const ciudadSeleccionada = $ciudad.value;
+  const ciudadMayusc = $ciudad.value;
+  const ciudadSeleccionada = ciudadMayusc.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
   const listaImagenes = imagenes_Skewt[ciudadSeleccionada];
 
   const nuevaPosicion = indiceImagenActual + incremento;
@@ -511,7 +518,7 @@ function avanzarImagen(incremento) {
 //----------------Variables-------------
 document.addEventListener('DOMContentLoaded', function() {
   const links = document.querySelectorAll('.descripcion');
-
+  
   links.forEach(link => {
     link.addEventListener('click', function(event) {
       const variable = this.getAttribute('data-variable');

@@ -48,8 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
             celda.appendChild(aImagen);
           }
         });
-      } else {
-        console.error(`No se encontró la variable: ${variable}`);
       }
     })
     .catch(error => console.error('Error al cargar el archivo JSON:', error));
