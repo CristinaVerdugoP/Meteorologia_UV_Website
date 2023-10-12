@@ -211,7 +211,7 @@ $botonBuscar.addEventListener('click', function() {
   let regionSeleccionada = $region.value;
   let ciudadSeleccionada = $ciudad.value;
 
-  if (regionSeleccionada !== 'Seleccione' && ciudadSeleccionada !== 'Seleccione') {
+  if (regionSeleccionada !== 'Seleccion' && ciudadSeleccionada !== 'Seleccione') {
     buscarImagen();
   } else {
     alert('Seleccione una región y una ciudad antes de buscar.');

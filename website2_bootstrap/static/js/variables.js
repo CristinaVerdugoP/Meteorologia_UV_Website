@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.title = cardTitle;
     titulo.textContent = cardTitle;
   } else {
-    // Si no estás en la página de los parámetros, no cambia el título
+    // Si no estás en la página de los parámetros, no se cambia el título
   }
 });
 

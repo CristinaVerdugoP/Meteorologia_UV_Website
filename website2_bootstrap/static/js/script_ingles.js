@@ -106,7 +106,7 @@ $region.addEventListener("change", function () {
   }
 })
 
-/**------------------------------ CODIGO PARA EL BOTON ---------------------------**/
+/**------------------------------ CODIGO PARA EL BOTON DE BUSCAR---------------------------**/
 
 function obtenerRutaImagen(region, ciudad) {
   if (region === 'Valparaíso' && ciudad === 'Valparaíso') {
