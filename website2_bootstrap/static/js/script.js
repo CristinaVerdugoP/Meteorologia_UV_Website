@@ -111,61 +111,61 @@ $region.addEventListener("change", function () {
 
 function obtenerRutaImagen(region, ciudad) {
   if (region === 'Valparaíso' && ciudad === 'Valparaíso') {
-    return ['assets/Series/ts_Valparaíso.jpg', 'assets/skew-t/Valparaiso/000.png'];
+    return ['assets/series/ts_valparaiso.jpg', 'assets/skew-t/Valparaiso/000.png'];
   } 
   else if (region === 'Valparaíso' && ciudad === 'Quillota') {
-    return ['assets/Series/ts_Quillota.jpg', 'assets/skew-t/Quillota/000.png'];
+    return ['assets/series/ts_quillota.jpg', 'assets/skew-t/Quillota/000.png'];
   }
   else if (region === 'OHiggins' && ciudad === 'Rancagua') {
-    return ['assets/Series/ts_Rancagua.jpg', 'assets/skew-t/Rancagua/000.png'];
+    return ['assets/series/ts_rancagua.jpg', 'assets/skew-t/Rancagua/000.png'];
   }
   else if (region === 'OHiggins' && ciudad === 'Pichilemu') {
-    return ['assets/Series/ts_Pichilemu.jpg', 'assets/skew-t/Pichilemu/000.png'];
+    return ['assets/series/ts_pichilemu.jpg', 'assets/skew-t/Pichilemu/000.png'];
   }
   else if (region === 'Maule' && ciudad === 'Talca') {
-    return ['assets/Series/ts_Talca.jpg', 'assets/skew-t/Talca/000.png'];
+    return ['assets/series/ts_talca.jpg', 'assets/skew-t/Talca/000.png'];
   }
   else if (region === 'Maule' && ciudad === 'Constitución') {
-    return ['assets/Series/ts_Constitución.jpg', 'assets/skew-t/Constitucion/000.png'];
+    return ['assets/series/ts_constitucion.jpg', 'assets/skew-t/Constitucion/000.png'];
   }
   else if (region === 'Ñuble' && ciudad === 'Chillán') {
-    return ['assets/Series/ts_Chillán.jpg', 'assets/skew-t/Chillan/000.png'];
+    return ['assets/series/ts_chillan.jpg', 'assets/skew-t/Chillan/000.png'];
   }
   else if (region === 'Bío Bío' && ciudad === 'Concepción') {
-    return ['assets/Series/ts_Concepción.jpg', 'assets/skew-t/Concepcion/000.png'];
+    return ['assets/series/ts_concepción.jpg', 'assets/skew-t/Concepcion/000.png'];
   }  
   else if (region === 'Bío Bío' && ciudad === 'Los Angeles') {
-    return ['assets/Series/ts_Los Ángeles.jpg', 'assets/skew-t/Los Angeles/000.png'];
+    return ['assets/series/ts_los_angeles.jpg', 'assets/skew-t/Los Angeles/000.png'];
   }  
   else if (region === 'Bío Bío' && ciudad === 'Lebu') {
-    return ['assets/Series/ts_Lebu.jpg', 'assets/skew-t/Lebu/000.png'];
+    return ['assets/series/ts_lebu.jpg', 'assets/skew-t/Lebu/000.png'];
   }
   else if (region === 'Araucanía' && ciudad === 'Temuco') {
-    return ['assets/Series/ts_Temuco.jpg', 'assets/skew-t/Temuco/000.png'];
+    return ['assets/series/ts_temuco.jpg', 'assets/skew-t/Temuco/000.png'];
   }  
   else if (region === 'Araucanía' && ciudad === 'Angol') {
-    return ['assets/Series/ts_Angol.jpg', 'assets/skew-t/Angol/000.png'];
+    return ['assets/series/ts_angol.jpg', 'assets/skew-t/Angol/000.png'];
   }
   else if (region === 'Araucanía' && ciudad === 'Villarrica') {
-    return ['assets/Series/ts_Villarica.jpg', 'assets/skew-t/Villarrica/000.png'];
+    return ['assets/series/ts_villarica.jpg', 'assets/skew-t/Villarrica/000.png'];
   }
   else if (region === 'Los Ríos' && ciudad === 'Valdivia') {
-    return ['assets/Series/ts_Valdivia.jpg', 'assets/skew-t/Valdivia/000.png'];
+    return ['assets/series/ts_valdivia.jpg', 'assets/skew-t/Valdivia/000.png'];
   }
   else if (region === 'Los Ríos' && ciudad === 'Los Lagos') {
-    return ['assets/Series/ts_Los Lagos.jpg', 'assets/skew-t/Los Lagos/000.png'];
+    return ['assets/series/ts_los_lagos.jpg', 'assets/skew-t/Los Lagos/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Puerto Montt') {
-    return ['assets/Series/ts_Puerto Montt.jpg', 'assets/skew-t/Puerto Monnt/000.png'];
+    return ['assets/series/ts_puerto_montt.jpg', 'assets/skew-t/Puerto Monnt/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Osorno') {
-    return ['assets/Series/ts_Osorno.jpg', 'assets/skew-t/Osorno/000.png'];
+    return ['assets/series/ts_osorno.jpg', 'assets/skew-t/Osorno/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Castro') {
-    return ['assets/Series/ts_Castro.jpg', 'assets/skew-t/Castro/000.png'];
+    return ['assets/series/ts_castro.jpg', 'assets/skew-t/Castro/000.png'];
   }
   else if (region === 'Los Lagos' && ciudad === 'Chaitén') {
-    return ['assets/Series/ts_Chaitén.jpg', 'assets/skew-t/Chaiten/000.png'];
+    return ['assets/series/ts_chaiten.jpg', 'assets/skew-t/Chaiten/000.png'];
   }
   return ['', ''];
 }
