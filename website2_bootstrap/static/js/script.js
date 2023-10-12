@@ -61,10 +61,10 @@ function mostrarLugares(arreglo, lugar, selectorVacio = true) {
       elementos +=
         '<option value="' + arreglo[i] + '">' + arreglo[i] + '</option>';
       }
-              
+
                 lugar.innerHTML = elementos;
               }
-              
+
 
 mostrarLugares(region, $region)
 
@@ -175,7 +175,7 @@ let $imagen2 = document.querySelector('#imagen2');
 function buscarImagen() {
   let regionSeleccionada = $region.value;
   let ciudadSeleccionada = $ciudad.value;
-  
+
   let rutasImagenes = obtenerRutaImagen(regionSeleccionada, ciudadSeleccionada);
   console.log("Rutas de las imágenes:", rutasImagenes);
 
@@ -193,7 +193,7 @@ function buscarImagen() {
 
   // Actualizar la imagen en el lado derecho con la imagen 000.png
   actualizarImagenSkewT(0);
-  
+
   // Resaltar el primer elemento de la lista como activo
   const listaImagenesElement = document.getElementById("lista_imagen_skewt");
   if (listaImagenesElement.children.length > 0) {
@@ -445,12 +445,12 @@ let indiceSeleccionado = -1;
 
 function resaltarElementoLista(indice) {
   const listaImagenesElement = document.getElementById("lista_imagen_skewt");
-  
+
   // Deseleccionar cualquier elemento previamente seleccionado
   if (indiceSeleccionado !== -1) {
     listaImagenesElement.children[indiceSeleccionado].classList.remove("active");
   }
-  
+
   // Resaltar el elemento actual
   listaImagenesElement.children[indice].classList.add("active");
   indiceSeleccionado = indice;
@@ -511,7 +511,7 @@ function avanzarImagen(incremento) {
 //----------------Variables-------------
 document.addEventListener('DOMContentLoaded', function() {
   const links = document.querySelectorAll('.descripcion');
-  
+
   links.forEach(link => {
     link.addEventListener('click', function(event) {
       const variable = this.getAttribute('data-variable');
