@@ -112,7 +112,6 @@ function obtenerRutaImagen(region, ciudad) {
   if (region === 'Valparaíso' && ciudad === 'Valparaíso') {
     return ['assets/series/ts_valparaiso.jpg', 'assets/skew-t/valparaiso/000.png'];
   } 
-
   else if (region === 'OHiggins' && ciudad === 'Rancagua') {
     return ['assets/series/ts_rancagua.jpg', 'assets/skew-t/rancagua/000.png'];
   }
