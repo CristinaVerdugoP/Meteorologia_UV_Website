@@ -50,7 +50,7 @@ let ciudad = ["Valparaíso", "Quillota",
               "Concepción", "Los Angeles", "Lebu",
               "Temuco", "Angol", "Villarrica",
               "Valdivia", "Los Lagos",
-              "Puerto Montt", "Osorno", "Castro", "Chaitén"] 
+              "Puerto Montt", "Osorno", "Castro", "Chaitén"]
 
 function mostrarLugares(arreglo, lugar, selectorVacio = true) {
   let elementos = "";
@@ -72,7 +72,7 @@ $region.addEventListener("change", function () {
   let valor = $region.value;
   switch (valor) {
     case "Valparaíso":
-      let valparaiso = ciudad.slice(0, 2);
+      let valparaiso = ciudad.slice(0, 1);
       mostrarLugares(valparaiso, $ciudad);
       break;
     case "OHiggins":
