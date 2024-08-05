@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         celdas.forEach((celda, index) => {
           if (index < imagenes.length) {
             const aImagen = document.createElement('a');
-            aImagen.href = `/assets/variables/${variable}${imagenes[index]}`;
+            aImagen.href = `assets/variables/${variable}${imagenes[index]}`;
             aImagen.target = '_blank';
             const imgImagen = document.createElement('img');
             imgImagen.className = 'imagen';
